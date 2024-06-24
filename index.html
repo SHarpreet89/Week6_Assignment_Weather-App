@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Image and text -->
+        <nav class="navbar navbar-light bg-light p-4">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                WEATHER APP
+            </a>
+        </nav>
+    </header>
+
+    <div class="container col-12 p-4" style="min-height: 80vh;">
+        <div class="row bg-light border border-5">
+            <!-- Left div with 20% width -->
+            <div class="col-2 bg-secondary">
+                <div style="flex-basis: 20%;">
+                    <h4 class="text-center p-4">SEARCH FOR A CITY</h4>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="cityInput" placeholder="Enter City">
+                            <small id="cityHelp" class="form-text text-muted">Enter the name of the city you want to search for.</small>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                  <hr>
+                  <div id="search-history-buttons" style="flex-basis: 70%;">
+
+                  </div>
+                <!-- Content for left div -->
+            </div>
+            
+            <!-- Right div with 80% width -->
+            <div class="col-10">
+                <div class="d-flex flex-column" style="height: 100%; min-height: 80vh;">
+                    <!-- Top div with 30% height -->
+                    <div class="flex-grow-1 bg-primary" style="flex-basis: 20%;">
+                        <!-- Content for top div -->
+                    </div>
+                    
+                    <!-- Bottom div with 70% height -->
+                    <div class="flex-grow-1 bg-warning" style="flex-basis: 80%;">
+                        <!-- Content for bottom div -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
