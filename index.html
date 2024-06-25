@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather App</title>
 </head>
 <body>
     <header>
@@ -24,11 +30,13 @@
             <div class="col-2 bg-secondary">
                 <div style="flex-basis: 20%;">
                     <h4 class="text-center p-4">SEARCH FOR A CITY</h4>
-                    <form>
+                    <form id="search-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="cityInput" placeholder="Enter City">
-                            <small id="cityHelp" class="form-text text-muted">Enter the name of the city you want to search for.</small>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            <small id="cityName" class="form-text text-muted">REQ: Enter the name of the city you want to search for.</small>
+                            <input type="text" class="form-control" id="cityCountry" placeholder="Enter Country">
+                            <small id="countryName" class="form-text text-muted">OPTIONAL: Enter country name to narrow down search.</small>
+                        <button type="submit" id="searchCity" class="btn btn-primary btn-block">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -43,12 +51,12 @@
             <div class="col-10">
                 <div class="d-flex flex-column" style="height: 100%; min-height: 80vh;">
                     <!-- Top div with 30% height -->
-                    <div class="flex-grow-1 bg-primary" style="flex-basis: 20%;">
+                    <div class="flex-grow-1 bg-primary" id="weatherDisplayMain" style="flex-basis: 20%;">
                         <!-- Content for top div -->
                     </div>
                     
                     <!-- Bottom div with 70% height -->
-                    <div class="flex-grow-1 bg-warning" style="flex-basis: 80%;">
+                    <div class="flex-grow-1 bg-warning" id="weatherDisplaySecondary" style="flex-basis: 80%;">
                         <!-- Content for bottom div -->
                     </div>
                 </div>
@@ -56,9 +64,13 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
