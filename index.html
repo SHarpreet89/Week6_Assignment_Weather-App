@@ -18,7 +18,7 @@
         <!-- Image and text -->
         <nav class="navbar navbar-light bg-light p-4">
             <a class="navbar-brand" href="#">
-                <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                 WEATHER APP
             </a>
         </nav>
@@ -26,17 +26,19 @@
 
     <div class="container col-12 p-4" style="min-height: 80vh;">
         <div class="row bg-light border border-5">
-            <!-- Left div with 20% width -->
-            <div class="col-2 bg-secondary">
+            <!-- Left div with 30% width -->
+            <div class="col-3 bg-secondary">
                 <div style="flex-basis: 20%;">
                     <h4 class="text-center p-4">SEARCH FOR A CITY</h4>
                     <form id="search-form">
                         <div class="form-group">
                             <input type="text" class="form-control" id="cityInput" placeholder="Enter City">
                             <small id="cityName" class="form-text text-muted">REQ: Enter the name of the city you want to search for.</small>
-                            <input type="text" class="form-control" id="cityCountry" placeholder="Enter Country">
+                            <input type="text" class="form-control" id="cityCountry" placeholder="Optional: Enter Country">
                             <small id="countryName" class="form-text text-muted">OPTIONAL: Enter country name to narrow down search.</small>
-                        <button type="submit" id="searchCity" class="btn btn-primary btn-block">Submit</button>
+                            <div style="justify-items: center;">
+                                <button type="submit" id="searchCity" class="btn btn-primary btn-block">Submit</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -47,16 +49,16 @@
                 <!-- Content for left div -->
             </div>
             
-            <!-- Right div with 80% width -->
-            <div class="col-10">
+            <!-- Right div with 70% width -->
+            <div class="col-9">
                 <div class="d-flex flex-column" style="height: 100%; min-height: 80vh;">
                     <!-- Top div with 30% height -->
-                    <div class="flex-grow-1 bg-primary" id="weatherDisplayMain" style="flex-basis: 20%;">
+                    <div class="flex-grow-1 bg-primary" id="weatherDisplayMain" style="flex-basis: 30%;">
                         <!-- Content for top div -->
                     </div>
                     
                     <!-- Bottom div with 70% height -->
-                    <div class="flex-grow-1 bg-warning" id="weatherDisplaySecondary" style="flex-basis: 80%;">
+                    <div class="flex-grow-1 bg-warning" id="weatherDisplaySecondary" style="flex-basis: 70%;">
                         <!-- Content for bottom div -->
                     </div>
                 </div>
