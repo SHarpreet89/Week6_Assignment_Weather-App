@@ -1,0 +1,80 @@
+
+
+.centered-button {
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    text-transform: uppercase;
+}
+
+.h1 {
+    text-transform: uppercase;
+}
+
+#weatherDisplayMain {
+    color: rgb(236, 255, 255);
+    padding: 20px;
+    padding-top: 30px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(84,65,109);
+}
+
+#futureWeatherDisplay > h3 {
+    margin-bottom: 20px;
+}
+
+#futureWeatherDisplay {
+    color: rgb(236, 255, 255);
+    padding: 20px;
+    background-color: rgb(43,35,90);
+    border-top: 3px solid rgb(255, 255, 255);
+    border-radius: 10px;    
+}
+
+#futureWeatherDisplay > div > .card{
+    color: black;
+    background-color:rgb(187, 174, 203);
+    margin-bottom: 20px;
+    border: none;
+}
+
+#weatherDisplaySecondary > div > div.card.project-card {
+    border: none;
+}
+
+
+.form-control {
+    max-width: 90%;
+}
+
+.mainCountryInfo {
+    line-height: 70%;
+}
+
+.swim-lanes {
+    display: flex;
+    justify-content: space-between;
+}
+.swim-lane {
+    flex: 1;
+    margin: 0 5px;
+}
+.card {
+    margin-bottom: 20px;
+}
+
+#weatherDisplaySecondary > * {
+    border-radius: 10px !important;
+    
+}
+
+.project-card * {
+    padding: 5px;
+    line-height: 25px;
+}
+
+.card-header {
+    color: rgb(0, 35, 88);
+}
+
