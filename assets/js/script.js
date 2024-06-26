@@ -86,7 +86,7 @@ const fetchLocationCoordinates = function(cityName, country = '') {
         .catch(error => {
             console.error('Error fetching coordinates:', error);
             throw error;
-        });
+        });saea
 };
 
 const fetchFutureWeather = function(lat, lon) {
@@ -136,7 +136,7 @@ function displayCurrentWeatherInformation(city, cityCurrentWeather) {
     mainWeatherDisplay.empty().append(cityTitle, currentTemp, currentWind, currentHumidity);
 
     const iconUrl = `http://openweathermap.org/img/wn/${cityCurrentWeather.weather[0].icon}.png`;
-    const weatherIcon = $('<img>').attr('src', iconUrl).addClass('weather-icon').css({ 'height': '150px', 'width': '150px' });
+    const weatherIcon = $('<img>').attr('src', iconUrl).addClass('weather-icon').css({ 'height': '100px', 'width': '100px' });
     mainWeatherIcon.empty().append(weatherIcon)
 }
 
