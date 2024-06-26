@@ -24,7 +24,7 @@
         </nav>
     </header>
 
-    <div class="container col-12 py-3" style="min-height: 80vh;">
+    <div class="container col-12" style="min-height: 80vh;">
         <div class="row bg-light">
             <!-- Left div with 30% width -->
             <div class="d-flex flex-column col-3 aside">
@@ -51,10 +51,12 @@
             </div>
             
             <!-- Right div with 70% width -->
-            <div class="col-9">
+            <div id="weatherInfoContainer" class="col-9">
                 <div class="d-flex flex-column" style="height: 100%; min-height: 80vh;">
                     <!-- Top div with 30% height -->
                     <div class="flex-grow-1" id="weatherDisplayMain" style="flex-basis: 35;">
+                        <div id="mainWeatherInfo"></div>
+                        <div id="mainWeatherIcon"></div>
                     </div>
                     <!-- Bottom div with 70% height -->
                     <div class="flex-grow-1" id="futureWeatherDisplay"  style="flex-basis: 65%">

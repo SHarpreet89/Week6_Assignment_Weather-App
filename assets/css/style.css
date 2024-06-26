@@ -1,11 +1,20 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .navbar {
     background-color: rgb(210, 179, 250) !important;
     color:  rgb(84,65,109);
     font-weight: bolder;
+    max-width: 1320px;
+    min-width: 1320px;
+    border-radius: 10px;
 }
 
-.navbar-brand {
-    padding-left: 120px !important;
+.container {
+    padding-top: 8px !important;
 }
 
 .centered-button {
@@ -16,6 +25,12 @@
     background-color: rgb(255, 251, 220);
     height: 45px;
     font-weight: bolder;
+}
+
+#weatherInfoContainer {
+    background-color: rgb(84,65,109);
+    border-radius: 10px;
+    
 }
 
 #searchBox {
@@ -47,19 +62,40 @@
 }
 
 #weatherDisplayMain {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#mainWeatherInfo {
     color: rgb(236, 255, 255);
     padding: 20px;
     padding-top: 30px;
     border-bottom: 3px solid rgb(255, 255, 255);
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     background-color: rgb(84,65,109);
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+}
+
+#mainWeatherIcon {
+    color: rgb(236, 255, 255);
+    padding: 0px;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    border-radius: 0 10px 10px 0;
+    background-color: rgb(84,65,109);
+    display: block;
+    justify-content: space-between;
+    width: 45%;
+    display: flex;
+    align-items:baseline;
 }
 
 .aside {
     color: rgb(236, 255, 255);
     padding: 20px;
     padding-top: 30px;
-    border-bottom: 3px solid rgb(255, 255, 255);
     border-radius: 10px;
     background-color: rgb(29, 22, 39);
 }

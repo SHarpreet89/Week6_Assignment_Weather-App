@@ -8,7 +8,8 @@ const countryToSearch = searchForm.find('#cityCountry');
 const searchHistory = $('#searchHistory');
 const mainWeatherDisplay = $('#weatherDisplayMain');
 const secondaryWeatherDisplay = $('#weatherDisplaySecondary');
-const mainWeatherIcon = $('#weatherMainIcon');
+const mainWeatherInfo =$('#mainWeatherInfo')
+const mainWeatherIcon = $('#mainWeatherIcon');
 
 searchHistory.on('click', 'button', function(event) {
     const cityIndex = $(this).index();
@@ -133,10 +134,10 @@ function displayCurrentWeatherInformation(city, cityCurrentWeather) {
     const currentTemp = $('<div>').addClass('h3').text((cityCurrentWeather.main.temp - 273.15).toFixed(2) + ' °C');
     const currentWind = $('<div>').addClass('h3').text(`Wind: ${cityCurrentWeather.wind.speed} m/s`);
     const currentHumidity = $('<div>').addClass('h3').text(`Humidity: ${cityCurrentWeather.main.humidity}%`);
-    mainWeatherDisplay.empty().append(cityTitle, currentTemp, currentWind, currentHumidity);
+    mainWeatherInfo.empty().append(cityTitle, currentTemp, currentWind, currentHumidity);
 
     const iconUrl = `http://openweathermap.org/img/wn/${cityCurrentWeather.weather[0].icon}.png`;
-    const weatherIcon = $('<img>').attr('src', iconUrl).addClass('weather-icon').css({ 'height': '100px', 'width': '100px' });
+    const weatherIcon = $('<img>').attr('src', iconUrl).addClass('weather-icon').css({ 'height': '150px', 'width': '150px' });
     mainWeatherIcon.empty().append(weatherIcon)
 }
 
