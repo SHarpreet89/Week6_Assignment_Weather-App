@@ -15,7 +15,7 @@ searchHistory.on('click', 'button', function(event) {
     const cityIndex = $(this).index();
     const city = searchedCities[cityIndex];
     fetchAndDisplayWeather(city);
-    storeHistory(city);
+    storeHistory(city, cityIndex);
 });
 
 searchButton.on('click', function(event) {
