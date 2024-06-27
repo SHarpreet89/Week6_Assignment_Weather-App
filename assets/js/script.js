@@ -71,7 +71,7 @@ const fetchCurrentWeather = function(cityName, country = '') {
 const fetchLocationCoordinates = function(cityName, country = '') {
     const coordinateURL = `https://nominatim.openstreetmap.org/search?q=${cityName},${country}&format=json&addressdetails=1`;
 
-    return fetch(coordinateURL)
+    fetch(coordinateURL)
         .then(response => response.json())
         .then(data => {
             if (data.length === 0) {
