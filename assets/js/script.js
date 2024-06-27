@@ -71,7 +71,7 @@ const fetchCurrentWeather = function(cityName, country = '') {
 const fetchLocationCoordinates = function(cityName, country = '') {
     const coordinateURL = `https://nominatim.openstreetmap.org/search?q=${cityName},${country}&format=json&addressdetails=1`;
 
-    fetch(coordinateURL)
+    return fetch(coordinateURL)
         .then(response => response.json())
         .then(data => {
             if (data.length === 0) {
@@ -87,7 +87,7 @@ const fetchLocationCoordinates = function(cityName, country = '') {
         .catch(error => {
             console.error('Error fetching coordinates:', error);
             throw error;
-        });saea
+        });
 };
 
 const fetchFutureWeather = function(lat, lon) {
